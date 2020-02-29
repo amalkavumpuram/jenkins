@@ -1,28 +1,21 @@
-def calculate():
-    operation = input('''Please type in the math operation you would like to complete:
-+ for addition
-- for subtraction
-* for multiplication
-/ for division''')
+import sys
+a = int(sys.argv[1])
+b = int(sys.argv[2])
+def add(a,b):
+    print("addition of two numbers is",a+b)
 
-    number_1 = int(input('Please enter the first number: '))
-    number_2 = int(input('Please enter the second number: '))
+def sub(a,b):
+    print("substarction os two numbers is",a-b)
 
-    if operation == '+':
-        print('{} + {} = '.format(number_1, number_2))
-        print(number_1 + number_2)
+def mul(a,b):
+    print("multiplication of two numbers is",a*b)
 
-    elif operation == '-':
-        print('{} - {} = '.format(number_1, number_2))
-        print(number_1 - number_2)
-
-    elif operation == '*':
-        print('{} * {} = '.format(number_1, number_2))
-        print(number_1 * number_2)
-
-    elif operation == '/':
-        print('{} / {} = '.format(number_1, number_2))
-        print(number_1 / number_2)
+def div(a,b):
+    if(b==0):
+        print("b value cannot be zero")
     else:
-        print('You have not typed a valid operator, please run the program again.')
-calculate()
+        print("division of two numbers is",a/b)
+add(a,b)
+sub(a,b)
+mul(a,b)
+div(a,b)
